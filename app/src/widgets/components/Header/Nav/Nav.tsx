@@ -10,10 +10,10 @@ export const Nav: FC = () => {
 					<Link href="/">Главная</Link>
 				</li>
 				<li>
-					<Link href="/projects">Работы</Link>
+					<Link href="/">Работы</Link>
 				</li>
 				<li>
-					<Link href="/contacts">Контакты</Link>
+					<Link href="/">Контакты</Link>
 				</li>
 				<li>
 					<Link href="tel:74952077570">+7 495 207-75-70</Link>
