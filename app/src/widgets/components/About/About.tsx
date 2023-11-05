@@ -36,7 +36,7 @@ export const About: FC = () => {
 						Instagram
 					</Button>
 					<Button className={styles.social_btn}>
-						<Image src="/images/yt.svg" alt="youtube" width={24} height={24} />
+						<Image src="/images/yt.svg" alt="yt" width={24} height={24} />
 						YouTube
 					</Button>
 				</div>
