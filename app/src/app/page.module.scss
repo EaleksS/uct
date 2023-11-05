@@ -1,0 +1,42 @@
+.main {
+	max-width: var(--max-width);
+	margin: 40px auto;
+}
+
+.section {
+	border-radius: var(--border-radius);
+	height: 600px;
+	background: rgba(0, 0, 0, 0.2);
+	position: relative;
+	overflow: hidden;
+	padding: 0 80px;
+
+	.img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		z-index: -1;
+	}
+
+	.title {
+		height: calc(100% - 150px);
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		h1 {
+			font-size: 50px;
+			font-weight: 400;
+		}
+
+		.btns {
+			display: flex;
+			gap: 16px;
+		}
+	}
+}
