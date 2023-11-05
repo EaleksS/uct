@@ -14,10 +14,10 @@ interface Props {
 const data = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
 
 export const Products: FC<Props> = ({ all }) => {
+	const [value, setValue] = useState<string>("");
+
 	switch (all) {
 		case "yes":
-			const [value, setValue] = useState<string>("");
-
 			return (
 				<section className={styles.products}>
 					<Search value={value} setValue={setValue}>
