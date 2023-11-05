@@ -1,6 +1,7 @@
 import { FC } from "react";
 import styles from "./Product.module.scss";
 import Image from "next/image";
+import Link from "next/link";
 
 interface Props {
 	color?: string;
@@ -9,13 +10,11 @@ interface Props {
 export const Product: FC<Props> = ({ color }) => {
 	return (
 		<article className={styles.product} style={{ background: color }}>
-			<h2>
-				Ремонт ПК <br /> и Ноутбуков
-			</h2>
+			<h2>Riksha</h2>
 
-			<div className={styles.price}>
-				<h3>от</h3>
-				<h3>500 ₽</h3>
+			<div className={styles.link}>
+				<Link href="#">GitHub</Link>
+				<Link href="#">Figma</Link>
 			</div>
 
 			<div className={styles.arrow}>
@@ -29,10 +28,10 @@ export const Product: FC<Props> = ({ color }) => {
 
 			<Image
 				className={styles.img}
-				src="/images/comp.png"
+				src="/images/riksha.png"
 				alt="computer"
-				width={180}
-				height={180}
+				width={200}
+				height={125}
 			/>
 		</article>
 	);

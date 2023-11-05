@@ -9,19 +9,19 @@ export default function Home() {
 			<section className={styles.section}>
 				<Image
 					className={styles.img}
-					src="/images/main.jpg"
+					src="/images/main3.jpg"
 					alt="main pc"
-					width={800}
-					height={500}
+					width={1600}
+					height={1000}
 				/>
 				<Header />
 				<div className={styles.title}>
 					<h1>
-						Компьютерный <br /> сервис <br /> с выездом домой
+						Эрнест <br /> front-end разработчик
 					</h1>
 					<div className={styles.btns}>
-						<Button>
-							Запись в сервис
+						<Button className={styles.btn}>
+							Написать мне!!!
 							<Image
 								src="/images/arrow-right.svg"
 								alt="arrow"
