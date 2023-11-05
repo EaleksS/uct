@@ -11,8 +11,8 @@ export default function Home() {
 					className={styles.img}
 					src="/images/main.jpg"
 					alt="main pc"
-					width={1600}
-					height={1000}
+					width={800}
+					height={500}
 				/>
 				<Header />
 				<div className={styles.title}>
