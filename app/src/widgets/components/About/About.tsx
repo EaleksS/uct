@@ -22,9 +22,9 @@ export const About: FC = () => {
 				новейшие технологии и фреймворки.
 			</p>
 			<div className={styles.social}>
-				<h3>
+				<h2>
 					Присоединяйтесь к нам <br /> в социальных сетях:
-				</h3>
+				</h2>
 
 				<div className={styles.btns}>
 					<Button className={styles.social_btn}>

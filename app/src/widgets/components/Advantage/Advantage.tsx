@@ -58,7 +58,7 @@ export const Advantage: FC = () => {
 							width={56}
 							height={56}
 						/>
-						<h3>{item.title}</h3>
+						<h2>{item.title}</h2>
 						<p>{item.description}</p>
 					</article>
 				))}
