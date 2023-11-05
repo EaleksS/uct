@@ -20,6 +20,10 @@ export default function Home() {
 					<h1>
 						Эрнест <br /> front-end разработчик
 					</h1>
+					<p>
+						Я создаю отзывчивые веб-сайты, <br /> где технологии сочетаются с
+						креативностью.
+					</p>
 					<div className={styles.btns}>
 						<Button className={styles.btn}>
 							Написать мне!!!
