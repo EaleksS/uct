@@ -3,7 +3,6 @@ import { Inter, Fira_Code } from "next/font/google";
 import "@/globalStyles/globals.css";
 import "@/globalStyles/normalize.css";
 
-const inter = Inter({ subsets: ["latin"] });
 const fira = Fira_Code({
 	subsets: ["greek"],
 	weight: ["300", "400", "500", "600", "700"],

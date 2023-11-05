@@ -16,7 +16,7 @@ export const Nav: FC = () => {
 					<Link href="/">Контакты</Link>
 				</li>
 				<li>
-					<Link href="tel:74952077570">+7 495 207-75-70</Link>
+					<Link href="tel:+79659943654">+7 965 994-36-54</Link>
 				</li>
 			</ul>
 		</nav>
