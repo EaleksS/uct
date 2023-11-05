@@ -30,8 +30,8 @@ export const Product: FC<Props> = ({ color }) => {
 				className={styles.img}
 				src="/images/riksha.png"
 				alt="computer"
-				width={302}
-				height={175}
+				width={200}
+				height={115.9}
 			/>
 		</article>
 	);
