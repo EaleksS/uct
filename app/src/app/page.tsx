@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "./page.module.scss";
-import { About, Header, Products } from "@/widgets";
+import { About, Advantage, Header, Products } from "@/widgets";
 import { Button } from "@/shared";
 
 export default function Home() {
@@ -43,6 +43,7 @@ export default function Home() {
 			</section>
 			<Products />
 			<About />
+			<Advantage />
 		</main>
 	);
 }

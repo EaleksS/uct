@@ -5,6 +5,31 @@
 	height: 200px;
 	position: relative;
 
+	transition: all 0.2s ease-in-out;
+
+	&:hover {
+		&::after {
+			border-color: #282828;
+		}
+	}
+
+	&::after {
+		content: "";
+		position: absolute;
+		top: -7px;
+		right: -7px;
+		left: -7px;
+		bottom: -7px;
+		border: 2px solid transparent;
+		border-radius: calc(var(--border-radius) + 6px);
+		transition: all 0.2s ease-in-out;
+	}
+
+	h2 {
+		font-size: 20px;
+		font-weight: 400;
+	}
+
 	h3 {
 		font-weight: 400;
 	}

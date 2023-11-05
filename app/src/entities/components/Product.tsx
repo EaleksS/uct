@@ -9,10 +9,9 @@ interface Props {
 export const Product: FC<Props> = ({ color }) => {
 	return (
 		<article className={styles.product} style={{ background: color }}>
-			<h3>
+			<h2>
 				Ремонт ПК <br /> и Ноутбуков
-			</h3>
-
+			</h2>
 
 			<div className={styles.price}>
 				<h3>от</h3>

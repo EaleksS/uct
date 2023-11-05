@@ -1,0 +1,47 @@
+.advantage {
+	border-radius: var(--border-radius);
+	margin-top: 40px;
+	background: var(--red);
+	padding: 20px 80px;
+	padding-bottom: 40px;
+
+	display: grid;
+	grid-template-columns: 0.9fr 1fr;
+	gap: 100px;
+	position: relative;
+
+	h1 {
+		font-size: 45px;
+		font-weight: 400;
+	}
+
+	.btns {
+		display: flex;
+		gap: 16px;
+		position: absolute;
+		bottom: 40px;
+
+		.btn {
+			background: #fff;
+			border-color: #fff;
+			color: #000;
+		}
+	}
+
+	.items {
+		margin-top: 40px;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 20px;
+
+		h3 {
+			margin-top: 10px;
+			font-weight: 500;
+		}
+
+		p {
+			font-weight: 300;
+			margin-top: 10px;
+		}
+	}
+}
