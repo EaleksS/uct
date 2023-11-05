@@ -13,6 +13,7 @@ export default function Home() {
 					alt="main pc"
 					width={1600}
 					height={1000}
+					priority={true}
 				/>
 				<Header />
 				<div className={styles.title}>
