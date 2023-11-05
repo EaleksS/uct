@@ -15,7 +15,7 @@ export default function Home() {
 					height={1000}
 					priority={true}
 				/>
-				<Header />
+				<Header line />
 				<div className={styles.title}>
 					<h1>
 						Эрнест <br /> front-end разработчик

@@ -1,0 +1,26 @@
+.label {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: relative;
+	height: 55px;
+	max-width: 400px;
+	border-radius: var(--border-radius);
+	background: #1e1e1e;
+
+	align-items: center;
+
+	img {
+		margin: 0 15px;
+		cursor: pointer;
+	}
+
+	.input {
+		height: 100%;
+		width: 100%;
+		border: 0;
+		background: transparent;
+		outline: none;
+		color: #fff;
+	}
+}

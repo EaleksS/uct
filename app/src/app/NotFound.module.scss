@@ -1,0 +1,24 @@
+.main {
+	max-width: var(--max-width);
+	margin: 40px auto;
+}
+
+.section {
+	padding: 0 80px;
+	background: #1e1e1e;
+	border-radius: var(--border-radius);
+}
+
+.not_found {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: calc(100dvh - 400px);
+
+	h1 {
+		font-size: 160px;
+		line-height: 0px;
+		color: var(--red);
+	}
+}
