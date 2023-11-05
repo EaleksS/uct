@@ -7,9 +7,6 @@ export const Nav: FC = () => {
 		<nav className={styles.nav}>
 			<ul>
 				<li>
-					<Link href="/404">404</Link>
-				</li>
-				<li>
 					<Link href="/">Главная</Link>
 				</li>
 				<li>
