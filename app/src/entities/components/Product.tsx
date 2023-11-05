@@ -31,7 +31,7 @@ export const Product: FC<Props> = ({ color }) => {
 				src="/images/riksha.png"
 				alt="computer"
 				width={200}
-				height={115.9}
+				height={115}
 			/>
 		</article>
 	);
