@@ -11,18 +11,6 @@
 	align-items: center;
 	overflow-y: auto;
 
-	opacity: 0;
-
-	transition: all 0.2s ease-in-out;
-
-	&.active {
-		opacity: 1;
-
-		.content {
-			transform: scale(1);
-		}
-	}
-
 	.content {
 		width: 450px;
 		background: var(--background-start-rgb);
@@ -31,9 +19,6 @@
 		padding: 30px;
 		border-radius: 20px;
 		position: relative;
-
-		transform: scale(0);
-		transition: all 0.2s ease-in-out;
 
 		@media (max-width: 510px) {
 			width: 100%;

@@ -12,6 +12,7 @@ import {
 import styles from "./Modal.module.scss";
 import { createPortal } from "react-dom";
 import Image from "next/image";
+import { CSSTransition } from "react-transition-group";
 
 interface Props {
 	children: ReactNode;
@@ -49,29 +50,24 @@ export const Modal: FC<Props> = ({
 		onClose && onClose((prev) => !prev);
 	};
 
-	if (!isOpen) {
-		return null;
-	}
-
 	const modal = (
-		<div
-			className={clsx(styles.overlay, className, { [styles.active]: isOpen })}
-			onClick={handleClose}
-		>
-			<div
-				className={clsx(styles.content, classNameContent)}
-				onClick={(e) => e.stopPropagation()}
-			>
+		<CSSTransition in={isOpen} timeout={200} classNames="modal" unmountOnExit>
+			<div className={clsx(styles.overlay, className)} onClick={handleClose}>
 				<div
-					onClick={() => onClose && onClose((prev) => !prev)}
-					className={styles.close}
+					className={clsx(styles.content, classNameContent)}
+					onClick={(e) => e.stopPropagation()}
 				>
-					<Image src="/images/close.png" alt="close" width={20} height={20} />
-				</div>
+					<div
+						onClick={() => onClose && onClose((prev) => !prev)}
+						className={styles.close}
+					>
+						<Image src="/images/close.png" alt="close" width={20} height={20} />
+					</div>
 
-				{children}
+					{children}
+				</div>
 			</div>
-		</div>
+		</CSSTransition>
 	);
 
 	return createPortal(modal, wrapper.current);
