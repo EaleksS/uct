@@ -8,7 +8,6 @@ import {
 	SetStateAction,
 	useEffect,
 	useRef,
-	useState,
 } from "react";
 import styles from "./Modal.module.scss";
 import { createPortal } from "react-dom";
@@ -32,8 +31,6 @@ export const Modal: FC<Props> = ({
 	const el = global.window && document.createElement("div");
 	const wrapper: React.RefObject<HTMLElement> = useRef(el);
 
-	const [isOpens, setIsOpens] = useState<boolean>(false);
-
 	useEffect(() => {
 		const current = wrapper.current as HTMLElement;
 		current.setAttribute("id", "overlay");
@@ -52,21 +49,13 @@ export const Modal: FC<Props> = ({
 		onClose && onClose((prev) => !prev);
 	};
 
-	useEffect(() => {
-		if (isOpen) {
-			setIsOpens(true);
-		} else {
-			setIsOpens(false);
-		}
-	}, [isOpen]);
-
 	if (!isOpen) {
 		return null;
 	}
 
 	const modal = (
 		<div
-			className={clsx(styles.overlay, className, { [styles.active]: isOpens })}
+			className={clsx(styles.overlay, className, { [styles.active]: isOpen })}
 			onClick={handleClose}
 		>
 			<div
