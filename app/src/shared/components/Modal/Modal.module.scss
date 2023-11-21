@@ -11,6 +11,12 @@
 	align-items: center;
 	overflow-y: auto;
 
+	&.active {
+		.content {
+			transform: scale(1);
+		}
+	}
+
 	.content {
 		width: 450px;
 		background: var(--background-start-rgb);
@@ -19,6 +25,8 @@
 		padding: 30px;
 		border-radius: 20px;
 		position: relative;
+		transform: scale(0);
+		transition: all 0.2s ease;
 
 		@media (max-width: 510px) {
 			width: 100%;

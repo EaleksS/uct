@@ -8,6 +8,7 @@ import {
 	SetStateAction,
 	useEffect,
 	useRef,
+	useState,
 } from "react";
 import styles from "./Modal.module.scss";
 import { createPortal } from "react-dom";
@@ -50,9 +51,28 @@ export const Modal: FC<Props> = ({
 		onClose && onClose((prev) => !prev);
 	};
 
+	const [isActive, setIsActive] = useState<boolean>(false);
+
+	useEffect(() => {
+		if (isOpen) {
+			setTimeout(() => {
+				setIsActive(true);
+			}, 1);
+		} else {
+			setTimeout(() => {
+				setIsActive(false);
+			}, 1);
+		}
+	}, [isOpen]);
+
 	const modal = (
-		<CSSTransition in={isOpen} timeout={200} classNames="modal" unmountOnExit>
-			<div className={clsx(styles.overlay, className)} onClick={handleClose}>
+		<CSSTransition in={isOpen} timeout={300} classNames="modal" unmountOnExit>
+			<div
+				className={clsx(styles.overlay, className, {
+					[styles.active]: isActive,
+				})}
+				onClick={handleClose}
+			>
 				<div
 					className={clsx(styles.content, classNameContent)}
 					onClick={(e) => e.stopPropagation()}
